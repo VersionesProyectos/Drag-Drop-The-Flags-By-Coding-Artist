@@ -114,7 +114,7 @@ const drop = (e) => {
       //Insert new img element
       currentDrop.insertAdjacentHTML(
         "afterbegin",
-        `<img src= "${currentElement.id}.png">`
+        `<img src= "/assets/flags/${currentElement.id}.png">`
       );
       count += 1;
     }
@@ -135,7 +135,7 @@ const drop = (e) => {
       //insert new img
       e.target.insertAdjacentHTML(
         "afterbegin",
-        `<img src="${draggedElementData}.png">`
+        `<img src="/assets/flags/${draggedElementData}.png">`
       );
       count += 1;
     }
@@ -168,7 +168,7 @@ const creator = () => {
     if (isTouchDevice()) {
       flagDiv.style.position = "absolute";
     }
-    flagDiv.innerHTML = `<img src="${i}.png" id="${i}">`;
+    flagDiv.innerHTML = `<img src="/assets/flags/${i}.png" id="${i}">`;
     dragContainer.appendChild(flagDiv);
   }
   //Sort the array randomly before creating country divs
